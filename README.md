@@ -6,8 +6,8 @@ This is a command-line tool for performing brute force attacks against FTP serve
 # Installation
 
 ```
-git clone https://github.com/DrW3b/ftp_login.git
-cd ftp_login
+git clone https://github.com/DrW3b/ftp_brute.git
+cd ftp_brute
 pip3 install -r requirements.txt
 ```
 
