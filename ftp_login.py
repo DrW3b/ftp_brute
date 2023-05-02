@@ -6,7 +6,7 @@ async def attempt_login(server, username, password):
     try:
         ftp = FTP(server, timeout=10)
         ftp.login(username, password)
-        print(f'Successful login to {server} with {username}:{password}')
+        print(f'\033[32mSuccessful login to {server} with {username}:{password}\033[0m')
         ftp.quit()
     except Exception as e:
         print(f'Failed login attempt to {server} with {username}:{password}. {e}')
