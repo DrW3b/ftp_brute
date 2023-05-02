@@ -13,13 +13,18 @@ async def attempt_login(server, username, password):
 
 async def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-t', '--server-file', required=True, help='file containing server addresses')
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument('-s', '--single-server', help='single server to target')
+    group.add_argument('-f', '--server-file', help='file containing server addresses')
     parser.add_argument('-u', '--username-file', required=True, help='file containing usernames')
     parser.add_argument('-p', '--password-file', required=True, help='file containing passwords')
     args = parser.parse_args()
 
-    with open(args.server_file) as f_servers:
-        servers = f_servers.read().splitlines()
+    if args.single_server:
+        servers = [args.single_server]
+    else:
+        with open(args.server_file) as f_servers:
+            servers = f_servers.read().splitlines()
 
     with open(args.username_file) as f_usernames:
         usernames = f_usernames.read().splitlines()
