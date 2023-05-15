@@ -38,4 +38,4 @@ To attempt to log in to multiple servers with the same list of usernames and pas
 python ftp_brute.py -f servers.txt -u usernames.txt -p passwords.txt
 ```
 # Legal Disclaimer: 
-This script is intended for educational and/or testing purposes only. The creator of this script does not condone or support the use of this script for any illegal or unethical activities, including but not limited to attacking targets without their permission. The use of this script for any such activities is strictly prohibited and may result in legal consequences. By using this script, you agree that you will not use it for any illegal or unethical purposes, and that you will use it only for educational and/or testing purposes, with the permission of the target. The creator of this script is not responsible for any misuse or illegal use of the script.
+ This script is provided as-is and is intended for educational purposes only. The author is not responsible for any damages or illegal use of this script. Please use it responsibly and at your own risk.
